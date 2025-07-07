@@ -220,7 +220,7 @@ const InstructorDashboard = ()=>{
         columnNumber: 5
     }, this);
 };
-_s(InstructorDashboard, "aSYXijwoahrvfWs2VdXADBH1g9U=");
+_s(InstructorDashboard, "Ningyl+yEJKBdgHrjKAOt4I8Gv0=");
 _c = InstructorDashboard;
 const __TURBOPACK__default__export__ = InstructorDashboard;
 var _c;
