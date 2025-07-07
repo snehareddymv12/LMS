@@ -23,7 +23,7 @@ export default function RegisterForm() {
 
     try {
       const response = await axios.post(
-        `http://localhost:4000/api/login/${form.role}/signup`,
+        `https://lms-backend-virid-eight.vercel.app/api/login/${form.role}/signup`,
         form
       );
 

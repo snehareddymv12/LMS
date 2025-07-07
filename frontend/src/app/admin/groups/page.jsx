@@ -10,7 +10,7 @@ const AdminGroupsPage = () => {
     if (!token) return;
 
     axios
-      .get('http://localhost:4000/api/admin/groups', {
+      .get('https://lms-backend-virid-eight.vercel.app/api/admin/groups', {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setGroups(res.data.groups))

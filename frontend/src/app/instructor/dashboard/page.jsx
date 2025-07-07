@@ -18,7 +18,7 @@ const InstructorDashboard = () => {
     if (!token) return;
 
     axios
-      .get('http://localhost:4000/api/course/instructor', {
+      .get('https://lms-backend-virid-eight.vercel.app/api/course/instructor', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -33,7 +33,7 @@ const InstructorDashboard = () => {
 
     try {
       const res = await axios.post(
-        'http://localhost:4000/api/course/upload',
+        'https://lms-backend-virid-eight.vercel.app/api/course/upload',
         form,
         {
           headers: {
@@ -62,7 +62,7 @@ const InstructorDashboard = () => {
     if (!confirm('Are you sure you want to delete this course?')) return;
 
     try {
-      await axios.delete(`http://localhost:4000/api/course/${id}`, {
+      await axios.delete(`https://lms-backend-virid-eight.vercel.app/api/course/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
