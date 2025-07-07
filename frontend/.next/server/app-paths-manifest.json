@@ -1,0 +1,13 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/admin/assign/page": "app/admin/assign/page.js",
+  "/admin/dashboard/page": "app/admin/dashboard/page.js",
+  "/admin/group/page": "app/admin/group/page.js",
+  "/admin/groups/page": "app/admin/groups/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/instructor/dashboard/page": "app/instructor/dashboard/page.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js",
+  "/register/page": "app/register/page.js",
+  "/user/dashboard/page": "app/user/dashboard/page.js"
+}
