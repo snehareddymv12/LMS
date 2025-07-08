@@ -36,7 +36,7 @@ function RegisterForm() {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         try {
-            const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(`http://localhost:4000/api/login/${form.role}/signup`, form);
+            const response = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].post(`https://lms-backend-virid-eight.vercel.app/api/login/${form.role}/signup`, form);
             alert('Registration successful!');
             router.push('/login');
         } catch (err) {
@@ -143,7 +143,7 @@ function RegisterForm() {
         columnNumber: 5
     }, this);
 }
-_s(RegisterForm, "sDJAaoF3CxwtjQ24LP4d/phC5gM=", false, function() {
+_s(RegisterForm, "fgKINz3W57xupzgAN3nus3cYSAg=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];

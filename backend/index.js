@@ -1,11 +1,11 @@
-require('dotenv').config(); // Load .env variables
+require("dotenv").config(); // Load .env variables
 
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const jwt = require('jsonwebtoken');
-const multer = require('multer');
-const path = require('path');
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const jwt = require("jsonwebtoken");
+const multer = require("multer");
+const path = require("path");
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -18,44 +18,41 @@ app.use(cors());
 mongoose
   .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
   })
-  .then(() => console.log('✅ MongoDB connected'))
-  .catch((err) => console.error('❌ MongoDB connection error:', err.message));
+  .then(() => console.log("✅ MongoDB connected"))
+  .catch((err) => console.error("❌ MongoDB connection error:", err.message));
+
+app.get("/", (req, res) => {
+  res.json({ message: "hello lms" });
+});
+// GET /home route
+app.get("/home", (req, res) => {
+  res.json({ message: "Welcome to the Home route!" });
+});
 
 // Routes
-const authRoutes = require('./routes/authRoutes');
-app.use('/api', authRoutes);
+const authRoutes = require("./routes/authRoutes");
+app.use("/api", authRoutes);
 
-const courseRoutes = require('./routes/courseRoutes');
-app.use('/api/course', courseRoutes);
+const courseRoutes = require("./routes/courseRoutes");
+app.use("/api/course", courseRoutes);
 
-const groupRoutes = require('./routes/groupRoutes');
-app.use('/api/group', groupRoutes);
+const groupRoutes = require("./routes/groupRoutes");
+app.use("/api/group", groupRoutes);
 
-const assignmentRoutes = require('./routes/assignmentRoutes');
-app.use('/api/assignments', assignmentRoutes);
+const assignmentRoutes = require("./routes/assignmentRoutes");
+app.use("/api/assignments", assignmentRoutes);
 
-const courseAssignmentRoute = require('./routes/courseAssignmentRoute');
-app.use('/api/course-assign', courseAssignmentRoute); // ✅ matches frontend URL
+const courseAssignmentRoute = require("./routes/courseAssignmentRoute");
+app.use("/api/course-assign", courseAssignmentRoute); // ✅ matches frontend URL
 
-
-
-const adminRoutes = require('./routes/adminRoutes');
-app.use('/api/admin', adminRoutes);
-
-
-
-
-
-
-
-
-
+const adminRoutes = require("./routes/adminRoutes");
+app.use("/api/admin", adminRoutes);
 
 // Health check
-app.get('/', (req, res) => {
-  res.send('✅ LMS Backend API is running');
+app.get("/", (req, res) => {
+  res.send("✅ LMS Backend API is running");
 });
 
 // Start the server
