@@ -29,7 +29,7 @@ const UserDashboard = () => {
       }
 
       axios
-        .get('https://lms-backend-virid-eight.vercel.app/api/course/assigned', {
+        .get('https://lms-bcnd.onrender.com/api/course/assigned', {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => setCourses(res.data.courses))

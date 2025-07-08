@@ -17,7 +17,7 @@ const AdminAssignPage = () => {
 
     // Load all courses
     axios
-      .get('https://lms-backend-virid-eight.vercel.app/api/course/all', {
+      .get('https://lms-bcnd.onrender.com/api/course/all', {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setCourses(res.data.courses))
@@ -25,7 +25,7 @@ const AdminAssignPage = () => {
 
     // Load all groups
     axios
-      .get('https://lms-backend-virid-eight.vercel.app/api/admin/groups', {
+      .get('https://lms-bcnd.onrender.com/api/admin/groups', {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setGroups(res.data.groups))
@@ -37,7 +37,7 @@ const AdminAssignPage = () => {
     setMessage('');
     try {
       await axios.post(
-        'https://lms-backend-virid-eight.vercel.app/api/course-assign/assign', // ✅ UPDATED route
+        'https://lms-bcnd.onrender.com/api/course-assign/assign', // ✅ UPDATED route
         {
           courseId: selectedCourse,
           groupId: selectedGroup,

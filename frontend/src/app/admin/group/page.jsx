@@ -16,7 +16,7 @@ const AdminGroupPage = () => {
     if (!token) return;
 
     axios
-      .get('https://lms-backend-virid-eight.vercel.app/api/group/users', {
+      .get('https://lms-bcnd.onrender.com/api/group/users', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -34,7 +34,7 @@ const AdminGroupPage = () => {
 
     axios
       .post(
-        'https://lms-backend-virid-eight.vercel.app/api/group/create',
+        'https://lms-bcnd.onrender.com/api/group/create',
         {
           name: groupName,
           userIds: selectedUsers

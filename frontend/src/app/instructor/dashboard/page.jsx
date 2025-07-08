@@ -18,7 +18,7 @@ const InstructorDashboard = () => {
     if (!token) return;
 
     axios
-      .get('https://lms-backend-virid-eight.vercel.app/api/course/instructor', {
+      .get('https://lms-bcnd.onrender.com/api/course/instructor', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -33,7 +33,7 @@ const InstructorDashboard = () => {
 
     try {
       const res = await axios.post(
-        'https://lms-backend-virid-eight.vercel.app/api/course/upload',
+        'https://lms-bcnd.onrender.com/api/course/upload',
         form,
         {
           headers: {
@@ -62,7 +62,7 @@ const InstructorDashboard = () => {
     if (!confirm('Are you sure you want to delete this course?')) return;
 
     try {
-      await axios.delete(`https://lms-backend-virid-eight.vercel.app/api/course/${id}`, {
+      await axios.delete(`https://lms-bcnd.onrender.com/api/course/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
